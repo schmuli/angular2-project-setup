@@ -20,12 +20,7 @@ jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
 __karma__.loaded = function() { };
 
 //override SYSTEM_CONFIG if exists.
-SYSTEM_CONFIG = SYSTEM_CONFIG || {};
-SYSTEM_CONFIG = Object.assign(SYSTEM_CONFIG, {
-    baseURL: '/base/'
-});
-
-System.config(SYSTEM_CONFIG);
+System.config(getSystemJsConfig('/base/',''));
 
 Promise.all([
     System.import('angular2/src/platform/browser/browser_adapter'),

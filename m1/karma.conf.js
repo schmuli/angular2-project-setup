@@ -2,11 +2,12 @@
 // Generated on Wed Jul 15 2015 09:44:02 GMT+0200 (Romance Daylight Time)
 'use strict';
 
-module.exports = function (config) {
+module.exports = function(config) {
+    var root = "m1/"
     config.set({
 
         // base path that will be used to resolve all patterns (eg. files, exclude)
-        basePath: '.',
+        basePath: '../',
 
 
         // frameworks to use
@@ -19,14 +20,14 @@ module.exports = function (config) {
             'node_modules/es6-module-loader/dist/es6-module-loader.js',
             'node_modules/systemjs/dist/system.src.js',
             'node_modules/angular2/bundles/angular2-polyfills.js',
-            { pattern: 'app/**/*.js', included: false, watched: true },
+            { pattern: root + 'app/**/*.js', included: false, watched: true },
             { pattern: 'node_modules/angular2/**/*.js', included: false, watched: false },
             { pattern: 'node_modules/rxjs/**/*.js', included: false, watched: false },
             { pattern: 'node_modules/wijmo/**/*.js', included: false, watched: false },
-            { pattern: 'app/**/*_spec.js', included: false, watched: true },
+            { pattern: root + 'app/**/*_spec.js', included: false, watched: true },
             { pattern: 'node_modules/systemjs/dist/system-polyfills.js', included: false, watched: false }, // PhantomJS2 (and possibly others) might require it
-            'system.config.js',
-            'test-main.js'
+            root + 'system.config.js',
+            root + 'test-main.js'
 
         ],
 
@@ -71,7 +72,7 @@ module.exports = function (config) {
         // start these browsers
         // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
         browsers: [
-        //'PhantomJS2',
+            //'PhantomJS2',
             'Chrome'//,
             // 'IE_no_addons'
         ],

@@ -6,7 +6,7 @@ var server;
 exports.config = {
     framework: 'jasmine2',
     directConnect: true,
-    baseUrl: 'http://localhost:' + port,
+    baseUrl: 'http://localhost:' + port + '/m1',
     specs: ['./e2e/*_spec.js'],
     multiCapabilities: [
         {
@@ -15,7 +15,7 @@ exports.config = {
     ],
     useAllAngular2AppRoots: true,
     beforeLaunch: function() {
-        app.use(express.static('./'));
+        app.use(express.static('../'));
         server = app.listen(port);
     },
     afterLaunch: function() {
