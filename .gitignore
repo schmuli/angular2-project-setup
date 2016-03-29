@@ -7,3 +7,7 @@ m1/e2e/**/*.js
 m1/e2e/**/*.js.map
 m1/app/**/*.css
 m1/app/**/*.css.map
+common/**/*.js
+common/**/*.js.map
+common/**/*.css
+common/**/*.css.map
